@@ -26,6 +26,7 @@ button.addEventListener(`click`, (e) => {
   discount(age)
   console.log(basePrice)
   console.log(ticketPrice)
+  document.getElementById(`final-price`).innerText = (`il costo del tuo biglietto è di € ${ticketPrice.toFixed(2)}`)
   }
 )
 
