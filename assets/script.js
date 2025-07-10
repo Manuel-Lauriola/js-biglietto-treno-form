@@ -26,6 +26,16 @@ button.addEventListener(`click`, (e) => {
   discount(age)
   console.log(basePrice)
   console.log(ticketPrice)
+  let ageClass = ``;
+  if (age < 18) {
+    ageClass = `In quanto minorenne godi di uno sconto del 20%`
+  }
+    else if (age > 64) {
+      ageClass = `In quanto senior godi di uno sconto del 40%`
+    }
+    else {ageClass = `Non ci sono sconti a disposizione`}
+  document.getElementById(`class`).innerText = (ageClass)
+  document.getElementById(`km`).innerText = (`avendo sceldo una tratta di ${distance}km`)
   document.getElementById(`final-price`).innerText = (`il costo del tuo biglietto è di € ${ticketPrice.toFixed(2)}`)
   }
 )
